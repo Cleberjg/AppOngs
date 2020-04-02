@@ -1,5 +1,4 @@
 const express = require('express');
-const connection = require('./database/connection');
 const OngController = require('./controllers/OngController');
 const InicidentController = require('./controllers/IncidentController');
 const ProfileController = require('./controllers/ProfileController');
@@ -19,5 +18,7 @@ routes.get('/profile', ProfileController.index);
 routes.get('/incidents', InicidentController.index);
 routes.post('/incidents', InicidentController.create);
 routes.delete('/incidents/:id', InicidentController.delete);
+
+
 
 module.exports = routes;
